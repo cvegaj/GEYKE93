@@ -24,10 +24,10 @@
 }
 
 \begin{document}
-\fancyhead[L]{\includegraphics[scale=0.18]{././Multimedia/ucr}}
+\fancyhead[L]{\includegraphics[scale=0.18]{ucr}}
 \fancyhead[C]{UNIVERSIDAD DE COSTA RICA\\ESCUELA DE INGENIERÍA ELECTRICA\\ESTRUCTURAS ABSTRACTAS DE DATOS Y ALGORITMOS\\ PARA INGENIERÍA\\PROPUESTA LIBRERÍA CRIPTOGRÁFICA EN C++\\GEYKE93
 }
-\fancyhead[R]{\includegraphics[scale=0.45]{././Multimedia/eie}}
+\fancyhead[R]{\includegraphics[scale=0.45]{eie}}
 \pagestyle{fancy}
 \setlength{\headheight}{60pt}
 
