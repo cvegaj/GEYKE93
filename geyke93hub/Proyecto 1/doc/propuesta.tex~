@@ -7,7 +7,8 @@
 \usepackage{booktabs}
 %\usepackage{hyperref}
 \usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue,citecolor=blue]{hyperref}
-\usepackage{graphicx}     % Para insertar gráficas
+\usepackage{graphicx}  
+\usepackage{pgfgantt}
 \hyphenation{}
 \usepackage[vmargin=4cm,			%%margins
 	    tmargin=3cm,
@@ -26,10 +27,10 @@
 }
 
 \begin{document}
-\fancyhead[L]{\includegraphics[scale=0.18]{ucr}}
+\fancyhead[L]{\includegraphics[scale=0.18]{./images/ucr}}
 \fancyhead[C]{UNIVERSIDAD DE COSTA RICA\\ESCUELA DE INGENIERÍA ELECTRICA\\ESTRUCTURAS ABSTRACTAS DE DATOS Y ALGORITMOS\\ PARA INGENIERÍA\\PROPUESTA LIBRERÍA CRIPTOGRÁFICA EN C++\\GEYKE93
 }
-\fancyhead[R]{\includegraphics[scale=0.45]{eie}}
+\fancyhead[R]{\includegraphics[scale=0.45]{./images/eie}}
 \pagestyle{fancy}
 \setlength{\headheight}{60pt}
 
@@ -75,7 +76,7 @@ Crear una librería de encriptacion que proporcione métodos de encriptación si
 \end{itemize}
 
 \section{Referencias}
-\begin{thebibliography}{9}
+\begin{thebibliography}{10}
 
 \bibitem{}\url{http://beecrypt.sourceforge.net/doxygen/c++/index.html}
 \bibitem{}\url{http://sourceforge.net/projects/cryptopp/?source=recommended}
@@ -86,7 +87,22 @@ Crear una librería de encriptacion que proporcione métodos de encriptación si
 \bibitem{}\url{http://es.wikipedia.org/wiki/RSA}
 \bibitem{}\url{http://es.wikipedia.org/wiki/Funci%C3%B3n_hash}
 \bibitem{}\url{http://www.openssh.org/}
+\bibitem{}\url{mirror.math.ku.edu/tex.../pgfgantt/pgfgantt.pdf}
 
+\section{Anexo}
+
+La distribución del trabajo a través del diagrama de Gantt se planificó de la siguiente manera: \\
+
+\begin{ganttchart}{1}{11}
+\gantttitle{Setiembre y Octubre}{11} \\
+\gantttitlelist{23,24,25,26,27,28,29,30,1,2,3}{1} \\
+\ganttgroup{Gabriel}{1}{7} \\
+\ganttbar{Hash function}{1}{7} \\
+\ganttgroup{Carla}{1}{7}\\
+\ganttbar{AES}{1}{7}\\
+\ganttgroup{Gabriel y Carla}{8}{11} \\
+\ganttbar{RSA}{8}{11}
+\end{ganttchart}
 
 \end{thebibliography}
 

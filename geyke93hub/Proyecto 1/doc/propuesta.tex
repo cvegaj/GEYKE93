@@ -7,7 +7,8 @@
 \usepackage{booktabs}
 %\usepackage{hyperref}
 \usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue,citecolor=blue]{hyperref}
-\usepackage{graphicx}     % Para insertar gráficas
+\usepackage{graphicx}  
+\usepackage{pgfgantt}
 \hyphenation{}
 \usepackage[vmargin=4cm,			%%margins
 	    tmargin=3cm,
@@ -75,7 +76,7 @@ Crear una librería de encriptacion que proporcione métodos de encriptación si
 \end{itemize}
 
 \section{Referencias}
-\begin{thebibliography}{9}
+\begin{thebibliography}{10}
 
 \bibitem{}\url{http://beecrypt.sourceforge.net/doxygen/c++/index.html}
 \bibitem{}\url{http://sourceforge.net/projects/cryptopp/?source=recommended}
@@ -86,7 +87,19 @@ Crear una librería de encriptacion que proporcione métodos de encriptación si
 \bibitem{}\url{http://es.wikipedia.org/wiki/RSA}
 \bibitem{}\url{http://es.wikipedia.org/wiki/Funci%C3%B3n_hash}
 \bibitem{}\url{http://www.openssh.org/}
+\bibitem{}\url{mirror.math.ku.edu/tex.../pgfgantt/pgfgantt.pdf}
 
+\section{Anexo}
+
+La distribución del trabajo a través del diagrama de Gantt se planificó de la siguiente manera: \\
+
+\begin{ganttchart}{1}{11}
+\gantttitle{Setiembre y Octubre}{11} \\
+\gantttitlelist{23,24,25,26,27,28,29,30,1,2,3}{1} \\
+\ganttgroup{Hash function (Gabriel)}{1}{7} \\
+\ganttgroup{AES (Carla)}{1}{7}\\
+\ganttgroup{RSA (Gabriel y Carla)}{8}{11} \\
+\end{ganttchart}
 
 \end{thebibliography}
 
