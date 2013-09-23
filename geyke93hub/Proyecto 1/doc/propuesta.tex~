@@ -3,6 +3,8 @@
 \usepackage{fancyhdr}
 \usepackage{url}
 \usepackage{listings}
+\usepackage{tabularx}
+\usepackage{booktabs}
 %\usepackage{hyperref}
 \usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue,citecolor=blue]{hyperref}
 \usepackage{graphicx}     % Para insertar gráficas
@@ -16,7 +18,7 @@
   \vspace{0.3cm}%
   \noindent%
   \textbf{#1}%
-  \vspace{0.2cm}%
+  \vspace{0.3cm}%
   \hrule\vspace*{0.5mm}%
   \noindent%
   \rule{\linewidth}{0.5mm}%
@@ -44,10 +46,25 @@ La aparición de la informática y el uso masivo de las comunicaciones digitales
 \section{Metodología}
 En este trabajo se busca partir del método de encriptación basado en los números primos y ejemplificar sus implementaciones en la criptografía antigua y la moderna. Dentro de esta última, estudiaremos a Ronald Linn Rivest y NSA (National Security Agency) que han sido pioneros de la época y quienes cuyo trabajo ha cambiado y clasificado la criptografía a través métodos que pensamos utilizar para la creación de la librería que es el fin del proyecto.
 
+\subsection{Tabla de algoritmos}
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{c | c | c}
+\toprule[0.3mm]
+Encriptacion simétrica & Encriptacion asimétrica & Hash function \\
+\midrule
+AES (Rijndael) & RSA & SHA2(256-512)\\
+\bottomrule[0.3mm]
+\end{tabular}
+\end{center}
+\caption{Métodos de encriptación}
+\end{table}
+
+
 \section{Objetivos}
 
 \subsection{Objetivo General}
-Crear una librería capaz de encriptar a través de métodos de encriptación simétrica (AES), asimétrica (RSA) y funciones hash (SHA2). 
+Crear una librería de encriptacion que proporcione métodos de encriptación simétrica (AES), asimétrica (RSA) y funciones hash (SHA2). 
 
 \subsection{Objetivos Específicos}
 \begin{itemize}
