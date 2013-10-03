@@ -76,7 +76,9 @@ private:
   uint4 state[4];   // digest so far
   uint1 digest[16]; // the result
 
-  // low level logic operations
+
+
+	///low level logic operations
   static inline uint4 F(uint4 x, uint4 y, uint4 z);
   static inline uint4 G(uint4 x, uint4 y, uint4 z);
   static inline uint4 H(uint4 x, uint4 y, uint4 z);

@@ -5,6 +5,9 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    cout << "md5 of 'grape': " << md5("grape")<<endl;
+	cout << "Ingrese el texto: ";
+	string text;
+	cin >> text;
+    cout << "\n md5 of "<< text << " : " << md5(text)<<endl;
     return 0;
 }
