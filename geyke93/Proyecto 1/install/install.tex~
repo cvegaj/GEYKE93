@@ -1,0 +1,92 @@
+Algunos algoritmos y funciones de las siguientes librerías fueron incorporados en geyke93. La instalación de dichas se puede realizar directamente desde esta carpeta o a través de las respectivas direcciones oficiales (en el caso de otras versiones). Se detalla a continuación la versión utilizada y los contenidos.
+
+Crypto++ http://www.cryptopp.com/ 
+Fue hecha por Wei Dai en 1995 y soporta sistemas de 34 y 64 bits para muchos sistemas operativos dentro de los que se encuentra Android (usando STLport), Apple (MAC OS X e iOS), BSD, Linux, Solaris y Windows.
+
+
+Versión 5.6.2. (February 20, 2013)
+Detalles de esta versión:
+Se incorpora SHA-3 (Keccak)
+Previa licencia de Crypto++ cambia por Boost Software License 1.0 http://www.boost.org/ que es un set de librerías de C++
+Entre otros.
+Compiladores de esta librería: MSVC 2012, GCC 4.7, Clang 3.2, Solaris Studio 12.3, Intel C++ Compiler 13.0
+
+Hashes que incluye el .zip:
+
+SHA-1: ddc18ae41c2c940317cd6efe81871686846fa293
+SHA-256: 5cbfd2fcb4a6b3aab35902e2e0f3b59d9171fee12b3fc2b363e1801dfec53574
+SHA-512: 016ca7ebad1091d67ad0bc5ccb7549d96d4af6b563d9d5a612cae27b3d1a3514c41b954e319fed91c820e8c701e3aa43da186e0864bf959ce4afd1539248ebbe
+WHIRLPOOL: e31203da48a31b09e6ea48a75aa64fe5fd27fd370a1a609c4387526f09daab7582716563b688c0c81a8c3b200b8ffa7bdb2b981e5911640e5f1c172d6027f6ac
+
+Después de extraer el .zip revisar el README.txt.
+
+Sobre la licencia:
+The License of Crypto++ is somewhat unusual amongst open source projects. A distinction is made between the library as a compilation (i.e., collection), which is copyrighted by Wei Dai, and the individual files in it, which are public domain.
+The library is copyrighted as a compilation in order to place certain disclaimers (regarding warranty, export, and patents) in the license and to keep the attributions and public domain declarations intact when Crypto++ is distributed in source code form. The fact that individual files are public domain means that legally you can place code segments, entire files, or small sets of files (up to the limit set by fair use) into your own project and do anything you want with them without worrying about the copyright.
+
+Tabla de lo que incluye*****
+Esta librería incluye: ciphers (XSalsa20), message authentication codes, one-way hash functions, public-key cryptosystems, and key agreement schemes.
+
+
+Beecrypt
+
+BeeCrypt is an ongoing project to provide a strong and fast cryptography toolkit. Includes entropy sources, random generators, block ciphers, hash functions, message authentication codes, multiprecision integer routines, and public key primitives.
+
+BeeCrypt is a cryptography library that contains highly optimized C and assembler implementations of many well-known algorithms including Blowfish, MD5, SHA-1, Diffie-Hellman, and ElGamal. Unlike some other crypto libraries, BeeCrypt is not designed to solve one specific problem, like file encryption, but to be a general purpose toolkit which can be used in a variety of applications. There are also no patent or royalty issues associated with BeeCrypt.
+
+This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.
+
+La version revisada es 4.1.2 (stable) (released on 21 December 2004).
+
+La instalación y documentación se puede acceder a través de las siguientes direcciones o el file dentro de esta carpeta. 
+http://packages.debian.org/source/wheezy/beecrypt
+http://beecrypt.sourceforge.net/
+http://sourceforge.net/projects/beecrypt/
+
+http://beecrypt.sourceforge.net/doxygen/c/ LO QUE INCLUYE****
+
+Esta librería puede ser accesada desde Java bajo la instalación de BeeCrypt for Java.
+Ha sido probada para las siguientes plataformas:
+Cygwin
+Darwin/MacOS X
+Linux glibc 2.x alpha
+Linux glibc 2.x arm
+Linux glibc 2.x ia64
+Linux glibc 2.x m68k
+Linux glibc 2.x ppc
+Linux glibc 2.x s390
+Linux glibc 2.x s390x
+Linux glibc 2.x sparc
+Linux glibc 2.x x86
+Linux glibc 2.x x86_64/amd64
+Solaris 2.[6789] sparc (with Forte or GNU compilers)
+Solaris 2.[78] x86 (with Forte or GNU compilers)
+Tru64 Unix alpha
+Win32 (Windows 95, 98, NT 4.0, 2000, XP)
+
+
+The structures in the library are geared towards exchange with Java and its security and cryptography classes. This library can also be accessed from Java by installing BeeCrypt for Java, a JCE 1.2 crypto provider and the counterpart of this library.
+
+hashlib++
+
+Se revisó la versión 0.3.4. (13 octubre 2011)
+
+PPT is ready and comes with a new simple factory class to create wrappers dynamically. 
+
+hashlib++ es una librería simple y fácil utilizada para crear una checksum crptográfica (llamado hash function) a través de un único method-call que debería funcionar en cualquier compilador o plataforma. Su licencia es de BSD-license, osea que es software libre.
+
+is a simple and very easy to use library to create a cryptographic checksum called "hash" in C++. hashlib++ is written in plain C++ and should work with every compiler and platform. The library is released under the BSD-license and therefore free software. Copyright (c) 2007-2011 Benjamin Grüdelbach
+
+hashlib++ allows you to create a hash (for example MD5 or SHA1) with only one single method-call. So if you want to create a hash based on a file or a string quickly you might be interested.
+
+Documentación en Doxygen http://hashlib2plus.sourceforge.net/doc/sourcedoc/index.html
+Revisar README.tex
+
+Extraer el .zip indicado.
+
+
+
+
+
+
+
