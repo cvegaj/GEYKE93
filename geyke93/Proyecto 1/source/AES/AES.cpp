@@ -1,18 +1,33 @@
-// PRIMERA VERSION // CODIGO INCOMPLETO // AUN NO FUNCIONA ! 
-
 #include<stdio.h>
+#include<stdlib.h>
+#include<iostream>
+#include<sstream>
+using namespace std;
+///El numero de columnas de la columna estado en el algoritmo AES. 4 por defecto
 #define Nb 4
 
+/**Numero de rondas de cifrado.
+ * Se inicializa con 0 pero su valor cambia dentro del programa */
 int Nr=0;
 
+/**Numero de 'palabras' en  la Key. 
+ * Se inicializa con 0 pero su valor cambia dentro del programa */
 int Nk=0;
 
-unsigned char in[16], out[16], state[4][4];
+///Arreglo que contiene el texto plano que ha de ser encriptado
+unsigned char in[16]; 
+///Arreglo que contiene el mensaje final
+unsigned char out[16];
+///La matriz estado. Contiene el estado actual del mensaje durante el proceso de encriptacion
+unsigned char state[4][4];
 
+///Arreglo que contiene las llaves de ronda
 unsigned char RoundKey[240];
 
+///Llave de encriptacion dada por el usuario
 unsigned char Key[32];
 
+///Funcion getSBoxValue. Brinda un valor de la tabla de constantes sbox
 int getSBoxValue(int num)
 {
 	int sbox[256] =   {
@@ -36,6 +51,7 @@ int getSBoxValue(int num)
 	return sbox[num];
 }
 
+///Arreglo de constantes utilizadas para generar cada ronda
 int Rcon[255] = {
 	0x8d, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36, 0x6c, 0xd8, 0xab, 0x4d, 0x9a, 
 	0x2f, 0x5e, 0xbc, 0x63, 0xc6, 0x97, 0x35, 0x6a, 0xd4, 0xb3, 0x7d, 0xfa, 0xef, 0xc5, 0x91, 0x39, 
@@ -54,11 +70,18 @@ int Rcon[255] = {
 	0xc6, 0x97, 0x35, 0x6a, 0xd4, 0xb3, 0x7d, 0xfa, 0xef, 0xc5, 0x91, 0x39, 0x72, 0xe4, 0xd3, 0xbd, 
 	0x61, 0xc2, 0x9f, 0x25, 0x4a, 0x94, 0x33, 0x66, 0xcc, 0x83, 0x1d, 0x3a, 0x74, 0xe8, 0xcb  };
 
+/** @brief Funcion de Expansion de Llave. 
+ *  Produce las distintas llaves que se van a utilizar en cada ronda a partir de la llave dada 
+ * Para generar cada llave utiliza la llave anterior y funciones como rotacion, mezcla, y substitucion
+ * utilizando las constantes de cada ronda
+ * @see int Rcon
+ */
 void KeyExpansion()
 {
 	int i,j;
 	unsigned char temp[4],k;
 	
+	///Para la primera ronda, es la llave en si
 	for(i=0;i<Nk;i++)
 	{
 		RoundKey[i*4]=Key[i*4];
@@ -75,6 +98,8 @@ void KeyExpansion()
 					}
 					if (i % Nk == 0)
 					{
+
+						// Function RotWord()
 						{
 							k = temp[0];
 							temp[0] = temp[1];
@@ -83,6 +108,7 @@ void KeyExpansion()
 							temp[3] = k;
 						}
 
+						// Function Subword()
 						{
 							temp[0]=getSBoxValue(temp[0]);
 							temp[1]=getSBoxValue(temp[1]);
@@ -94,6 +120,7 @@ void KeyExpansion()
 					}
 					else if (Nk > 6 && i % Nk == 4)
 					{
+						// Function Subword()
 						{
 							temp[0]=getSBoxValue(temp[0]);
 							temp[1]=getSBoxValue(temp[1]);
@@ -109,6 +136,7 @@ void KeyExpansion()
 	}
 }
 
+///Esta funcion anade la llave de ronda al 'state' mediante una funcion binaria XOR 
 void AddRoundKey(int round) 
 {
 	int i,j;
@@ -121,6 +149,8 @@ void AddRoundKey(int round)
 	}
 }
 
+/**Esta funcion substituye los valores en la State por valores en la S-box
+ * @see getSBoxValue */
 void SubBytes()
 {
 	int i,j;
@@ -134,16 +164,21 @@ void SubBytes()
 	}
 }
 
+// ShiftRows() 
+/**Esta funcion cambia las columnas en la matriz de estado para la izquierda
+ */ 
 void ShiftRows()
 {
 	unsigned char temp;
 
+	// Rotate first row 1 columns to left	
 	temp=state[1][0];
 	state[1][0]=state[1][1];
 	state[1][1]=state[1][2];
 	state[1][2]=state[1][3];
 	state[1][3]=temp;
 
+	// Rotate second row 2 columns to left	
 	temp=state[2][0];
 	state[2][0]=state[2][2];
 	state[2][2]=temp;
@@ -152,6 +187,7 @@ void ShiftRows()
 	state[2][1]=state[2][3];
 	state[2][3]=temp;
 
+	// Rotate third row 3 columns to left
 	temp=state[3][0];
 	state[3][0]=state[3][3];
 	state[3][3]=state[3][2];
@@ -161,6 +197,7 @@ void ShiftRows()
 
 #define xtime(x)   ((x<<1) ^ (((x>>7) & 1) * 0x1b))
 
+///MixColumns mezcla las columnas de la state matrix
 void MixColumns()
 {
 	int i;
@@ -176,7 +213,54 @@ void MixColumns()
 	}
 }
 
+/**Funcion principal que encrypta el texto
+ * Utiliza las funciones MixColumns, ShiftRows, y Sub Bytes
+ * @see MixColumns
+ * @see ShiftRows
+ * @see SubBytes
+ */ 
 void Cipher()
+{
+	int i,j,round=0;
+
+	//Copia el PlainText al state.
+	for(i=0;i<4;i++)
+	{
+		for(j=0;j<4;j++)
+		{
+			state[j][i] = in[i*4 + j];
+		}
+	}
+
+	//First round key
+	AddRoundKey(0); 
+	
+	// Nr rounds.
+	for(round=1;round<Nr;round++)
+	{
+		SubBytes();
+		ShiftRows();
+		MixColumns();
+		AddRoundKey(round);
+	}
+	
+	// Last round.
+	SubBytes();
+	ShiftRows();
+	AddRoundKey(Nr);
+
+	// Copy the state array to output array.
+	for(i=0;i<4;i++)
+	{
+		for(j=0;j<4;j++)
+		{
+			out[i*4+j]=state[j][i];
+		}
+	}
+}
+
+///DeCipher hace lo mismo que Cipher pero en sentido contrario 
+void DeCipher()
 {
 	int i,j,round=0;
 
@@ -187,21 +271,19 @@ void Cipher()
 			state[j][i] = in[i*4 + j];
 		}
 	}
-
-	AddRoundKey(0); 
 	
-	for(round=1;round<Nr;round++)
-	{
-		SubBytes();
-		ShiftRows();
-		MixColumns();
-		AddRoundKey(round);
-	}
-	
-	SubBytes();
+	AddRoundKey(Nr-1); 
 	ShiftRows();
-	AddRoundKey(Nr);
-
+	SubBytes();
+	for(round=Nr-2;round>=0;round--)
+	{
+		AddRoundKey(round);
+		MixColumns();
+		ShiftRows();
+		SubBytes();
+	}
+	AddRoundKey(0);
+	
 	for(i=0;i<4;i++)
 	{
 		for(j=0;j<4;j++)
@@ -210,41 +292,126 @@ void Cipher()
 		}
 	}
 }
+///Funcion main
 int main()
 {
 	int i;
 
 	while(Nr!=128 && Nr!=192 && Nr!=256)
 	{
-		printf("Enter the length of Key(128, 192 or 256): ");
+		printf("Enter the length of Key(128, 192 or 256 only): ");
 		scanf("%d",&Nr);
 	}
 	
 	Nk = Nr / 32;
 	Nr = Nk + 6;
 
-	printf("Enter the Key in hexadecimal: ");
-	for(i=0;i<Nk*4;i++)
-	{
-		scanf("%c",&Key[i]);
-	}
 
-	printf("Enter the text in hexadecimal: ");
+	cout << "Cifrado(0) or Descifrado(1)? \n";
+	int answer;
+	cin >> answer;
+	if (answer==0){
+
+
+		unsigned int temp[16];
+		
+		cout << "Llave en hexadecimal: ";
+		for(i=0;i<Nk*4;i++)
+			{
+			scanf("%x", &temp[i]);
+		}
+	
+	
+		unsigned int temp2[16] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+		string text;
+		cout << "Texto plano: ";
+		cin >> text;
+		cout << text;
+	
+		int textsize = text.size();
+		for (i=0; i<textsize; i++){
+			char a = text.at(i);
+			int b = static_cast<int>(a);
+			temp2[i] = b;
+		}
+	
+		
+		for(i=0;i<Nk*4;i++)
+		{
+			Key[i]=temp[i];
+		}
+	
+		for(i=0;i<Nb*4;i++)
+		{
+			in[i]=temp2[i];
+		}
+	
+		cout << "\n\nSu texto en HEX es: ";
+
+		for(i=0;i<Nk*4;i++)
+		{
+			printf("%02x ",in[i]);
+		}
+	
+		cout << "\nSu llave en HEX es: ";
+	
+		for(i=0;i<Nb*4;i++)
+		{
+			printf("%02x ",Key[i]);
+		}
+	
+		KeyExpansion();
+		Cipher();
+	}
+	else if (answer==1){
+	
+		unsigned int temp[16];
+		unsigned int temp2[16];
+		
+		printf("Llave en hexadecimal: ");
+		for(i=0;i<Nk*4;i++){
+			scanf("%x", &temp[i]);
+		}
+		printf("Codigo en hexadecimal: ");
+		for(i=0;i<Nk*4;i++){
+			scanf("%x", &temp2[i]);
+		}		
+		
+		
+		for(i=0;i<Nk*4;i++)
+		{
+			Key[i]=temp[i];
+		}
+	
+		for(i=0;i<Nb*4;i++)
+		{
+			in[i]=temp2[i];
+		}
+	
+		cout << "\n\nSu codigo en HEX es: ";
+		
+		for(i=0;i<Nk*4;i++)
+		{
+			printf("%02x ",in[i]);
+		}
+	
+		cout << "\nSu llave en HEX es: ";
+	
+		for(i=0;i<Nb*4;i++)
+		{
+			printf("%02x ",Key[i]);
+		}
+	
+		KeyExpansion();
+		DeCipher();		
+		}
+
+	
+	printf("\n\nOutput:\n");
 	for(i=0;i<Nb*4;i++)
-	{
-		scanf("%c",&in[i]);
-	}
-
-
-	KeyExpansion();
-
-	Cipher();
-
-	printf("\n Out:\n");
-	for(i=0;i<Nk*4;i++)
-	{
-		printf("%02x ",out[i]);
-	}
+		{
+			printf("%02x ",out[i]);
+		}
 	printf("\n\n");
 }
 
