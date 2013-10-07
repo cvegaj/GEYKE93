@@ -111,8 +111,8 @@ University of Costa Rica \\ % Your institution for the title page
 \item Julio César
 \item XV León Battista Alberti 
 \begin{itemize}
-\item 1470 Tratado de Cifras
-\item 1530 Poligraphy
+\item 1470 
+\item 1530 
 \end{itemize}
 \item XVI Girolamo Cardano
 \item XIX Transposition
@@ -143,41 +143,29 @@ Combined study of cryptography and cryptanalysis
 \begin{itemize}
 \item Sustitution: Cesar algorithm (A becomes D, B becomes C...), ROT13, ROT47, Vigénere 
 \item Transposition: random order
+\end{itemize}
 \begin{figure}
 \includegraphics[width=0.6\linewidth]{rot13.png}
 \end{figure}
-\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Criptography algorithm}
-\begin{itemize}
-\item Simetric or convencional cryptosystem
-\item Asimetric or public key cryptosystem
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Criptography algorithm}
-\framesubtitle{Simetric cryptosystem}
+\framesubtitle{Simetric or convencional cryptosystem}
 \begin{itemize}
 \item Polyalphabetic Cipher: Enigma, Purple, SIGABA, TypeX
-\item Stream Cipher (Cifrado de lujo): RC4, Chameleon, FISH, Helix, ISAAC, Panama, Pike, SEAL, SOBER, WAKE
+\item Stream Cipher (Cifrado de flujo): RC4, Chameleon, FISH, Helix, ISAAC, Panama, Pike, SEAL, SOBER, WAKE
 \item Block Cipher: DES, AES, IDEA, Skipjack, Blowfish, RC2, RC5, CAST-128
 \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Criptography algorithm}
-\framesubtitle{Simetric cryptosystem}
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{cp.png}
 \end{figure}
 \end{frame}
 
+
 \begin{frame}
 \frametitle{Criptography algorithm}
-\framesubtitle{Asimetric cryptosystem}
+\framesubtitle{Asimetric or public key cryptosystem}
 \begin{itemize}
 \item Diffie-Hellman
 \item RSA
@@ -200,7 +188,6 @@ Combined study of cryptography and cryptanalysis
 \end{itemize}
 \end{frame}
 
-
 \subsection{AES}
 
 \begin{frame}
@@ -212,12 +199,8 @@ Combined study of cryptography and cryptanalysis
 \item Key sizes: 128, 192 or 256 bits
 \item Structure: Substitution-permutation network
 \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{AES}
 \begin{figure}
-\includegraphics[width=0.6\linewidth]{aes.png}
+\includegraphics[width=0.4\linewidth]{aes.png}
 \end{figure}
 \end{frame}
 
@@ -287,19 +270,12 @@ Combined study of cryptography and cryptanalysis
 \item Produces a 128-bit (16-byte) hash value
 \item Ron Rivest (1991): replace an earlier hash function, MD4.
 \item MD5 hash value is typically expressed as a hexadecimal number, 32 digits long.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Attack}
+\item Attack
 \begin{enumerate}
 \item A 2009 attack by Tao Xie and Dengguo Feng breaks MD5 collision resistance in $2^{20,96}$ time. This attack runs in a few seconds on a regular computer.
-\item GPUs:
-\begin{itemize}
-\item NVIDIA GeForce 8400GS graphics processor, 16–18 million hashes per second can be computed. 
-\item NVIDIA GeForce 8800 Ultra can calculate more than 200 million hashes per second.
-\end{itemize}
+\item GPUs. Ex: NVIDIA GeForce 8400GS graphics processor, 16–18 million hashes per second can be computed and NVIDIA GeForce 8800 Ultra can calculate more than 200 million hashes per second.
 \end{enumerate}
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -313,7 +289,7 @@ Combined study of cryptography and cryptanalysis
 
 \column{.5\textwidth} % Right column and width
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{diagram-md5.png}
+\includegraphics[width=0.8\linewidth]{diagram.jpg}
 \end{figure}
 \end{columns}
 \end{frame}
@@ -323,29 +299,17 @@ Combined study of cryptography and cryptanalysis
 \begin{frame}
 \frametitle{SHA2}
 \begin{itemize}
-\item SHA256: 32-bit words
-\item SHA512: 64-bit words
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{SHA2}
-\begin{itemize}
 \item SHA0 160-bit hash function (1993).
 \item SHA1 National Security Agency (NSA) 2010.
 \item SHA2 National Institute of Standards and Technology (NIST) as a U.S. Federal Information Processing Standard (FIPS) 2001.
+\begin{itemize}
+\item SHA256: 32-bit words
+\item SHA512: 64-bit words
+\end{itemize}
 \item Truncated versions of each standardized, known as SHA-224 and SHA-384 (NSA).
 \item SHA3 (Keccak, 2012) public competition among non-NSA designers. Same hash lengths as SHA2, and its internal structure differs significantly.
 \end{itemize}
 \end{frame}
-
-\begin{frame}
-\frametitle{SHA2}
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{sha.jpg}
-\end{figure}
-\end{frame}
-%------------------------------------------------
 
 %------------------------------------------------
 \section{Libraries}
@@ -358,22 +322,13 @@ Combined study of cryptography and cryptanalysis
 \begin{figure}
 \includegraphics[width=0.2\linewidth]{crypto.jpg}
 \end{figure}
-\end{frame}
-
-\begin{frame}
-\begin{table}
-\begin{tabular}{l l l l l}
-\toprule
-\textbf{Ciphers} & \textbf{MAC} & \textbf{Hash funct} & \textbf{Pub key cryptosystems} & \textbf{KAS}\\ 
-\midrule
-Panama & VMAC & SHA1 & RSA & DH \\
-Sosemanuk & HMAC & SHA2 (SHA224, SHA256, SHA384, SHA512)& DSA & DH2\\
-Salsa20 & GMAC (GCM) & SHA3  & ElGamal & MQV\\
-XSalsa20 & CMAC  &  WHIRLPOOL & NR & LUCDIF 
-\bottomrule
-end{tabular}
-\caption{Cryptopp}
-\end{table}
+\begin{itemize}
+\item Cipher: Panama, Sosemanuk, Salsa20, XSalsa20.
+\item MAC: VMAC, HMAC, GMAC, CMAC.
+\item Hash functions: SHA1, SHA2, SHA3...
+\item Public key cryptosystems: RSA, DSA, ElGamal
+\item KAS: DH, DH2, MQV, LUCDIF
+\end{itemize}
 \end{frame}
 
 %------------------------------------------------
@@ -391,25 +346,25 @@ end{tabular}
 \end{figure}
 \end{frame}
 
-\begin{frame}
-\frametitle{Beecrypt}
-\begin{itemize}
-\item Entropy sources for initializing pseudo-random generators and pseudo-random generators: FIPS-186
-\item Block ciphers: AES and Blowfish
-\item Hash functions
-\begin{itemize}
-\item MD5
-\item RIPEMD-128, RIPEMD-160, RIPEMD-256, RIPEMD-320
-\item SHA-1, SHA-224, SHA-256, SHA-384, SHA-512
-\end{itemize}
-\item Keyed hash functions (message authentication codes): HMAC-MD5, HMAC-SHA-1, HMAC-SHA-224, HMAC-SHA-256, HMAC-SHA-384, HMAC-SHA-512
-\item Diffie-Hellman key agreement
-\item DHAES encryption scheme, DSA signature scheme
-\item ElGamal signature scheme (two variants)
-\item RSA keypair generation with chinese remainder theorem variables
-\item RSA public and private key operations
-\end{itemize}
-\end{frame}
+%\begin{frame}
+%\frametitle{Beecrypt}
+%\begin{itemize}
+%\item Entropy sources for initializing pseudo-random generators and pseudo-random generators: FIPS-186
+%\item Block ciphers: AES and Blowfish
+%\item Hash functions
+%\begin{itemize}
+%\item MD5
+%\item RIPEMD-128, RIPEMD-160, RIPEMD-256, RIPEMD-320
+%\item SHA-1, SHA-224, SHA-256, SHA-384, SHA-512
+%\end{itemize}
+%\item Keyed hash functions (message authentication codes): HMAC-MD5, HMAC-SHA-1, HMAC-SHA-224, HMAC-SHA-256, HMAC-SHA-384, HMAC-SHA-512
+%\item Diffie-Hellman key agreement
+%\item DHAES encryption scheme, DSA signature scheme
+%\item ElGamal signature scheme (two variants)
+%\item RSA keypair generation with chinese remainder theorem variables
+%\item RSA public and private key operations
+%\end{itemize}
+%\end{frame}
 %------------------------------------------------
 \subsection{Hashlib++}
 \begin{frame}
@@ -418,26 +373,15 @@ end{tabular}
 \item Library to create cryptographic checksum called "hash" in C++. 
 \item hashlib++ is written in plain C++ and should work with every compiler and platform. 
 \item It is released under the BSD-license and therefore free software. Copyright (c) 2007-2011 Benjamin Grüdelbach
-\end{itemize} 
-\end{frame}
-
-\begin{frame}
-\frametitle{Hashlibpp class hierarchy}
+\item Hierarchy:
 \begin{itemize}
-\item Hashwrapper
-\begin{itemize}
-\item md5wrapper
-\item sha1wrapper
-\item sha256wrapper
-\item sha384wrapper
-\item sha512wrapper
-\end{itemize}
-\item Hashwrapper
+\item Hashwrapper: md5wrapper, sha1wrapper, sha256wrapper, sha384wrapper, sha512wrapper.
 \item MD5
 \item SHA1
 \item SHA256
 \item SHA2ext
 \item Others
+\end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -453,7 +397,7 @@ end{tabular}
 \item PGP (Pretty good privacy) Phil Zimmerman
 \end{itemize}
 \begin{figure}
-\includegraphics[width=0.2\linewidth]{pgp.png}
+\includegraphics[width=0.4\linewidth]{pgp.png}
 \end{figure}
 \end{frame}
 
@@ -521,6 +465,9 @@ SSH only verifies whether the same person offering the public key also owns the 
 \framesubtitle{Open efforts}
 \begin{itemize}
 \item NESSIE (New European Schemes for Signatures, Integrity, and Encryption) (European Union)
+\begin{figure}
+\includegraphics[width=0.3\linewidth]{nessie.png}
+\end{figure}
 \item CrypToolproject (eLearning Program for Cryptography and cryptanalysis)
 \begin{figure}
 \includegraphics[width=0.3\linewidth]{cryptool.png}
@@ -531,4 +478,4 @@ SSH only verifies whether the same person offering the public key also owns the 
 
 %----------------------------------------------------------------------------------------
 
-\end{document} 
+\end{document}  

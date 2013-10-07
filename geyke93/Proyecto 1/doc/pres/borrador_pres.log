@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.4.4)  7 OCT 2013 10:27
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.4.4)  7 OCT 2013 13:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1398,7 +1398,7 @@ Overfull \hbox (18.77187pt too wide) has occurred while \output is active
 File: rot13.png Graphic file (type png)
  <use rot13.png>
 Package pdftex.def Info: rot13.png used on input line 150.
-(pdftex.def)             Requested size: 192.23909pt x 118.2238pt.
+(pdftex.def)             Requested size: 205.37926pt x 126.30934pt.
 
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
@@ -1406,37 +1406,42 @@ Overfull \hbox (18.77187pt too wide) has occurred while \output is active
 
 [5
 
- <./rot13.png>]
-Overfull \hbox (18.77187pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[6
-
-]
-Overfull \hbox (18.77187pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[7
-
-] <cp.png, id=284, 754.82pt x 122.4575pt>
+ <./rot13.png>] <cp.png, id=230, 754.82pt x 122.4575pt>
 File: cp.png Graphic file (type png)
  <use cp.png>
-Package pdftex.def Info: cp.png used on input line 176.
+Package pdftex.def Info: cp.png used on input line 163.
 (pdftex.def)             Requested size: 273.83728pt x 44.42473pt.
 
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
-[8
+[6
 
- <./cp.png>] <ecc.png, id=311, 200.75pt x 140.525pt>
+ <./cp.png>] <ecc.png, id=257, 200.75pt x 140.525pt>
 File: ecc.png Graphic file (type png)
  <use ecc.png>
-Package pdftex.def Info: ecc.png used on input line 191.
+Package pdftex.def Info: ecc.png used on input line 179.
 (pdftex.def)             Requested size: 136.91603pt x 95.84734pt.
+
+Overfull \hbox (18.77187pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[7
+
+ <./ecc.png>]
+Overfull \hbox (18.77187pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[8
+
+] <aes.png, id=311, 281.05pt x 145.54375pt>
+File: aes.png Graphic file (type png)
+ <use aes.png>
+Package pdftex.def Info: aes.png used on input line 205.
+(pdftex.def)             Requested size: 136.91603pt x 70.90175pt.
 
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
@@ -1444,63 +1449,37 @@ Overfull \hbox (18.77187pt too wide) has occurred while \output is active
 
 [9
 
- <./ecc.png>]
-Overfull \hbox (18.77187pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[10
-
-]
-Overfull \hbox (18.77187pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[11
-
-] <aes.png, id=391, 281.05pt x 145.54375pt>
-File: aes.png Graphic file (type png)
- <use aes.png>
-Package pdftex.def Info: aes.png used on input line 222.
-(pdftex.def)             Requested size: 205.37926pt x 106.35709pt.
-
-Overfull \hbox (18.77187pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[12
-
- <./aes.png>] <rsa.png, id=418, 1042.89626pt x 756.8275pt>
+ <./aes.png>] <rsa.png, id=338, 1042.89626pt x 756.8275pt>
 File: rsa.png Graphic file (type png)
  <use rsa.png>
-Package pdftex.def Info: rsa.png used on input line 243.
+Package pdftex.def Info: rsa.png used on input line 226.
 (pdftex.def)             Requested size: 138.6277pt x 100.59674pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 243.
+LaTeX Font Info:    Try loading font information for U+msa on input line 226.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 243.
+LaTeX Font Info:    Try loading font information for U+msb on input line 226.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 243.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 226.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-<cpri.png, id=419, 754.82pt x 153.57375pt>
+<cpri.png, id=339, 754.82pt x 153.57375pt>
 File: cpri.png Graphic file (type png)
  <use cpri.png>
-Package pdftex.def Info: cpri.png used on input line 243.
+Package pdftex.def Info: cpri.png used on input line 226.
 (pdftex.def)             Requested size: 154.03183pt x 31.33752pt.
 
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
-[13
+[10
 
  <./rsa.png> <./cpri.png>]
 \openout4 = `borrador_pres.vrb'.
@@ -1513,13 +1492,52 @@ Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
-[14
+[11
 
-] <hash.png, id=478, 602.25pt x 162.6075pt>
+] <hash.png, id=398, 602.25pt x 162.6075pt>
 File: hash.png Graphic file (type png)
  <use hash.png>
-Package pdftex.def Info: hash.png used on input line 272.
+Package pdftex.def Info: hash.png used on input line 255.
 (pdftex.def)             Requested size: 205.37926pt x 55.45206pt.
+
+Overfull \hbox (18.77187pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[12
+
+ <./hash.png>] <comp.png, id=426, 642.4pt x 319.1925pt>
+File: comp.png Graphic file (type png)
+ <use comp.png>
+Package pdftex.def Info: comp.png used on input line 262.
+(pdftex.def)             Requested size: 308.06367pt x 153.07428pt.
+
+Overfull \hbox (18.77187pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[13
+
+ <./comp.png>] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2012/04/20 UCS: Unicode data U+2000..U+20FF
+)
+Overfull \hbox (18.77187pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[14
+
+] <md5.jpg, id=481, 351.3125pt x 230.8625pt>
+File: md5.jpg Graphic file (type jpg)
+ <use md5.jpg>
+Package pdftex.def Info: md5.jpg used on input line 295.
+(pdftex.def)             Requested size: 123.22592pt x 80.9757pt.
+
+<diagram.jpg, id=482, 770.88pt x 804.00375pt>
+File: diagram.jpg Graphic file (type jpg)
+ <use diagram.jpg>
+Package pdftex.def Info: diagram.jpg used on input line 295.
+(pdftex.def)             Requested size: 136.91862pt x 142.8006pt.
 
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
@@ -1527,71 +1545,69 @@ Overfull \hbox (18.77187pt too wide) has occurred while \output is active
 
 [15
 
- <./hash.png>] <comp.png, id=507, 642.4pt x 319.1925pt>
-File: comp.png Graphic file (type png)
- <use comp.png>
-Package pdftex.def Info: comp.png used on input line 279.
-(pdftex.def)             Requested size: 308.06367pt x 153.07428pt.
-
+ <./md5.jpg> <./diagram.jpg>]
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [16
 
- <./comp.png>]
+] <crypto.jpg, id=535, 131.49126pt x 35.13126pt>
+File: crypto.jpg Graphic file (type jpg)
+ <use crypto.jpg>
+Package pdftex.def Info: crypto.jpg used on input line 332.
+(pdftex.def)             Requested size: 68.45801pt x 18.29085pt.
+
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [17
 
-] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2012/04/20 UCS: Unicode data U+2000..U+20FF
-)
+ <./crypto.jpg>] <beecrypt.jpg, id=561, 168.63pt x 48.18pt>
+File: beecrypt.jpg Graphic file (type jpg)
+
+<use beecrypt.jpg>
+Package pdftex.def Info: beecrypt.jpg used on input line 347.
+(pdftex.def)             Requested size: 102.68962pt x 29.34048pt.
+
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [18
 
-] <md5.jpg, id=587, 351.3125pt x 230.8625pt>
-File: md5.jpg Graphic file (type jpg)
- <use md5.jpg>
-Package pdftex.def Info: md5.jpg used on input line 319.
-(pdftex.def)             Requested size: 123.22592pt x 80.9757pt.
-
-<diagram-md5.png, id=588, 220.825pt x 243.91125pt>
-File: diagram-md5.png Graphic file (type png)
- <use diagram-md5.png>
-Package pdftex.def Info: diagram-md5.png used on input line 319.
-(pdftex.def)             Requested size: 136.91862pt x 151.23828pt.
-
+ <./beecrypt.jpg>]
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [19
 
- <./md5.jpg> <./diagram-md5.png>]
+] <pgp.png, id=614, 1027.84pt x 770.88pt>
+File: pgp.png Graphic file (type png)
+ <use pgp.png>
+Package pdftex.def Info: pgp.png used on input line 402.
+(pdftex.def)             Requested size: 136.91603pt x 102.67632pt.
+
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [20
 
-]
+ <./pgp.png>]
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [21
 
-] <sha.jpg, id=669, 268.00125pt x 188.705pt>
-File: sha.jpg Graphic file (type jpg)
- <use sha.jpg>
-Package pdftex.def Info: sha.jpg used on input line 347.
-(pdftex.def)             Requested size: 273.83728pt x 192.81343pt.
+] <librossh.jpg, id=668, 501.875pt x 659.46375pt>
+File: librossh.jpg Graphic file (type jpg)
+ <use librossh.jpg>
+Package pdftex.def Info: librossh.jpg used on input line 428.
+(pdftex.def)             Requested size: 34.23161pt x 44.97978pt.
 
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
@@ -1599,12 +1615,23 @@ Overfull \hbox (18.77187pt too wide) has occurred while \output is active
 
 [22
 
- <./sha.jpg>] <crypto.jpg, id=695, 131.49126pt x 35.13126pt>
-File: crypto.jpg Graphic file (type jpg)
+ <./librossh.jpg>] <ansi.png, id=696, 261.97874pt x 77.28876pt>
+File: ansi.png Graphic file (type png)
 
-<use crypto.jpg>
-Package pdftex.def Info: crypto.jpg used on input line 361.
-(pdftex.def)             Requested size: 68.45801pt x 18.29085pt.
+<use ansi.png>
+Package pdftex.def Info: ansi.png used on input line 449.
+(pdftex.def)             Requested size: 96.11954pt x 28.35698pt.
+ <iso.png, id=697, 227.85126pt x 92.345pt>
+File: iso.png Graphic file (type png)
+ <use iso.png>
+Package pdftex.def Info: iso.png used on input line 449.
+(pdftex.def)             Requested size: 96.11954pt x 38.95653pt.
+
+<ieee.png, id=698, 182.6825pt x 47.17625pt>
+File: ieee.png Graphic file (type png)
+ <use ieee.png>
+Package pdftex.def Info: ieee.png used on input line 449.
+(pdftex.def)             Requested size: 96.11954pt x 24.82187pt.
 
 Overfull \hbox (18.77187pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
@@ -1612,31 +1639,85 @@ Overfull \hbox (18.77187pt too wide) has occurred while \output is active
 
 [23
 
- <./crypto.jpg>])
-Runaway argument?
-\let \AtEndDocument \@firstofone \@enddocumenthook \@checkend {docume\ETC.
-! File ended while scanning use of \beamer@collect@@body.
-<inserted text> 
-                \par 
-<*> borrador_pres.tex
-                     
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+ <./ansi.png> <./iso.png> <./ieee.png>]
+<cse.png, id=728, 484.81125pt x 196.735pt>
+File: cse.png Graphic file (type png)
+ <use cse.png>
+Package pdftex.def Info: cse.png used on input line 462.
+(pdftex.def)             Requested size: 96.11954pt x 39.00407pt.
 
-! Emergency stop.
-<*> borrador_pres.tex
-                     
-*** (job aborted, no legal \end found)
+Overfull \hbox (18.77187pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
 
- 
+[24
+
+ <./cse.png>] <nessie.png, id=755, 212.795pt x 63.23625pt>
+File: nessie.png Graphic file (type png)
+ <use nessie.png>
+Package pdftex.def Info: nessie.png used on input line 477.
+(pdftex.def)             Requested size: 96.11954pt x 28.5641pt.
+
+<cryptool.png, id=756, 200.75pt x 60.225pt>
+File: cryptool.png Graphic file (type png)
+ <use cryptool.png>
+Package pdftex.def Info: cryptool.png used on input line 477.
+(pdftex.def)             Requested size: 96.11954pt x 28.8369pt.
+
+Overfull \hbox (18.77187pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[25
+
+ <./nessie.png> <./cryptool.png>]
+\tf@nav=\write6
+\openout6 = `borrador_pres.nav'.
+
+\tf@toc=\write7
+\openout7 = `borrador_pres.toc'.
+
+\tf@snm=\write8
+\openout8 = `borrador_pres.snm'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 481.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 481.
+ (./borrador_pres.aux
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 481.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 481.
+Package rerunfilecheck Info: File `borrador_pres.out' has not changed.
+(rerunfilecheck)             Checksum: 1711355179771E9868A99DC60CA875C5;538.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 481.
+ ) 
 Here is how much of TeX's memory you used:
- 20901 strings out of 495059
- 365283 string characters out of 3182031
- 453173 words of memory out of 3000000
- 23501 multiletter control sequences out of 15000+200000
- 11510 words of font info for 43 fonts, out of 3000000 for 9000
+ 20948 strings out of 495059
+ 365935 string characters out of 3182031
+ 448449 words of memory out of 3000000
+ 23534 multiletter control sequences out of 15000+200000
+ 15208 words of font info for 58 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,16n,72p,402b,790s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb>
+Output written on borrador_pres.pdf (25 pages, 2165788 bytes).
+PDF statistics:
+ 832 PDF objects out of 1000 (max. 8388607)
+ 742 compressed objects within 8 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 254 words of extra memory for PDF output out of 10000 (max. 10000000)
+
