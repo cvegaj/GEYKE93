@@ -10,7 +10,7 @@ rsa: source/RSA/rsasirve1.cpp
 sha512: source/SHA2/SHA512/sha512.cpp
 	$(CC) $(CFLAGS) -o build/sha512 source/SHA2/SHA512/sha512.cpp
 sha256: source/SHA2/SHA256/sha256.cpp
-	$(CC) $(CFLAGS) -o build/sha256 source/SHA2/SHA512/sha256.cpp
+	$(CC) $(CFLAGS) -o build/sha256 source/SHA2/SHA256/sha256.cpp
 
 clean:
 	rm -f build/md5 build/aes build/rsa build/sha512 build/sha256
