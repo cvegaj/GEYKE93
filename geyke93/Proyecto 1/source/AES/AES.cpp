@@ -1,3 +1,10 @@
+/*
+**       Advanced Encryption Standard implementation in C.      **
+**       By Niyaz PK                                            **
+**       E-mail: niyazlife@gmail.com                            **
+**       Downloaded from Website: www.hoozi.com                 **
+******************************************************************/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<iostream>
