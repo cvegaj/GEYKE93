@@ -1,3 +1,6 @@
+/** 
+@file AES.cpp
+*/
 /*
 **       Advanced Encryption Standard implementation in C.      **
 **       By Niyaz PK                                            **
@@ -304,11 +307,8 @@ int main()
 {
 	int i;
 
-	while(Nr!=128 && Nr!=192 && Nr!=256)
-	{
-		printf("Enter the length of Key(128, 192 or 256 only): ");
-		scanf("%d",&Nr);
-	}
+
+	Nr = 128;
 	
 	Nk = Nr / 32;
 	Nr = Nk + 6;
