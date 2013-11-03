@@ -1,5 +1,0 @@
-all:
-	pdflatex propuesta.tex
-
-clean:
-	rm propuesta.pdf
