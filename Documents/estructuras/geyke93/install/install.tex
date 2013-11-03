@@ -1,0 +1,108 @@
+\documentclass[spanish]{article}
+\usepackage[utf8]{inputenc}                   % Para escribir tildes y eñes
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{booktabs}
+%\usepackage{hyperref}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue,citecolor=blue]{hyperref}
+\usepackage{graphicx}  
+\usepackage{pgfgantt}
+\hyphenation{}
+\usepackage[vmargin=4cm,			%%margins
+	    tmargin=3cm,
+	    hmargin=2cm,
+	    letterpaper]{geometry}
+
+\newcommand{\entitle}[1]{
+  \vspace{0.3cm}%
+  \noindent%
+  \textbf{#1}%
+  \vspace{0.3cm}%
+  \hrule\vspace*{0.5mm}%
+  \noindent%
+  \rule{\linewidth}{0.5mm}%
+  \vspace{0.5cm}%
+}
+
+\begin{document}
+\entitle{
+\begin{center}
+GEYKE93\\
+Librerías adicionales
+\end{center}
+}
+
+
+Algunos algoritmos y funciones de las siguientes librerías fueron incorporados en GEYKE93. La instalación de dichas se puede realizar directamente desde esta carpeta o a través de las respectivas direcciones oficiales (en el caso de otras versiones). Se detalla a continuación la versión utilizada y los contenidos.
+
+\section{Crypto++}
+
+Fue hecha por Wei Dai en 1995 y soporta sistemas de 34 y 64 bits para muchos sistemas operativos dentro de los que se encuentra Android (usando STLport), Apple (MAC OS X e iOS), BSD, Linux, Solaris y Windows. Compiladores de esta librería: MSVC 2012, GCC 4.7, Clang 3.2, Solaris Studio 12.3, Intel C++ Compiler 13.0.
+
+
+Versión 5.6.2. (February 20, 2013)
+Detalles de esta versión:
+\begin{itemize}
+\item Se incorpora SHA-3 (Keccak)
+\item Previa licencia de Crypto++ cambia por Boost Software License 1.0 \url{http://www.boost.org/} que es un set de librerías de $C++$
+\item Entre otros.
+\end{itemize}
+
+\url {http://www.cryptopp.com/} \\
+Después de extraer el .zip presente en esta carpeta o la dirección electrónica señalada, revisar el README.txt.
+
+Sobre la licencia:
+The License of Crypto++ is somewhat unusual amongst open source projects. A distinction is made between the library as a compilation (i.e., collection), which is copyrighted by Wei Dai, and the individual files in it, which are public domain.
+The library is copyrighted as a compilation in order to place certain disclaimers (regarding warranty, export, and patents) in the license and to keep the attributions and public domain declarations intact when Crypto++ is distributed in source code form. The fact that individual files are public domain means that legally you can place code segments, entire files, or small sets of files (up to the limit set by fair use) into your own project and do anything you want with them without worrying about the copyright.
+
+Esta librería incluye: ciphers, message authentication codes, one-way hash functions, public-key cryptosystems, and key agreement schemes.
+
+
+\section{Beecrypt}
+BeeCrypt es un proyecto que provee un amplio, rápido y fuerte kit de criptografía que puede ser utilizado en gran variedad de aplicaciones debido a que no está diseñado para resolver un único problema como otras librerías. Contiene C altamente optimizado e implementaciones de algoritmos como Blowfish, MD5, SHA-1, Diffie-Hellman, and ElGamal. Incluye entropy sources, random generators, block ciphers, hash functions, message authentication codes, multiprecision integer routines, and public key primitives.
+
+Esta librería es software libre que puede ser redistribuida y/o modificada bajo los térmios de GNU Lesser General Public License. Ver Free Software Foundation.
+
+La version revisada fue 4.1.2 (estable del 21 diciembre 2004).
+
+La instalación y documentación se puede acceder a través de las siguientes direcciones o el file dentro de esta carpeta. \\
+\url{http://packages.debian.org/source/wheezy/beecrypt}\\
+\url{http://beecrypt.sourceforge.net/}\\
+\url{http://sourceforge.net/projects/beecrypt/}\\
+\url{http://beecrypt.sourceforge.net/doxygen/c/}\\
+
+Esta librería puede ser accesada desde Java bajo la instalación de BeeCrypt for Java.
+Ha sido probada para las siguientes plataformas:
+\begin{enumerate}
+\item Cygwin
+\item Darwin/MacOS X
+\item Linux glibc 2.x alpha
+\item Linux glibc 2.x arm
+\item Linux glibc 2.x ia64
+\item Linux glibc 2.x m68k
+\item Linux glibc 2.x ppc
+\item Linux glibc 2.x s390
+\item Linux glibc 2.x s390x
+\item Linux glibc 2.x sparc
+\item Linux glibc 2.x x86
+\item Tru64 Unix alpha
+\item Win32 (Windows 95, 98, NT 4.0, 2000, XP)
+\end{enumerate}
+
+\section{hashlib++}
+
+Se revisó la versión 0.3.4. (13 octubre 2011)
+
+hashlib++ es una librería simple y fácil utilizada para crear una checksum crptográfica (llamado hash function) a través de un único method-call que debería funcionar en cualquier compilador o plataforma. Su licencia es de BSD-license, osea que es software libre.
+
+Documentación en Doxygen\\
+\url{http://hashlib2plus.sourceforge.net/doc/sourcedoc/index.html}\\
+Revisar README.tex
+
+Extraer el .zip indicado.
+
+\end{document}
+
+

@@ -1,0 +1,7 @@
+Ejecutar el comando 'make' para crear los binarios de los metodos de encriptacion en la carpeta 'build', los PDFs a partir de los .tex y la documentacion DOXYGEN en la carpeta 'doc'
+
+Ejecutar el comando 'make clean' para eliminar los archivos auxiliares creados por latex en la carpeta 'doc'
+
+Ejecutar el comando 'make clean_all' para eliminar los PDFs, archivos auxiliares de latex, los archivos creados por DOXYGEN en 'doc', y los binarios de la carpeta 'build'.
+
+=GEYKE=2013
