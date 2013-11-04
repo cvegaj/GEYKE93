@@ -13,13 +13,15 @@ sha256: source/SHA2/SHA256/sha256.cpp
 	$(CC) $(CFLAGS) -o build/sha256 source/SHA2/SHA256/sha256.cpp
 Propuesta: 
 	(cd doc; pdflatex propuesta.tex)
+Reporte:
+	(cd doc; pdflatex reporte.tex)
+Presentacion:
+	(cd doc/pres; pdflatex presentacion.tex)
 doxygen:
 	(cd doc; doxygen)
 
 clean:
-	rm -f doc/propuesta.aux doc/propuesta.log doc/propuesta.out
-
-clean_all: 
+	rm -f doc/propuesta.aux doc/propuesta.log doc/propuesta.out doc/reporte.pdf
 	rm -f build/md5 build/aes build/rsa build/sha512 build/sha256
 	rm -f -r doc/latex doc/html
 	rm -f doc/propuesta.pdf doc/propuesta.aux doc/propuesta.log doc/propuesta.out
